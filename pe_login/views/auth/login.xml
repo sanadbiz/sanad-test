@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="providers" name="OAuth Providers">
+        <t t-if="providers and  len(providers) &gt; 0">
+            <!--            <em t-attf-class="d-block text-center text-muted small my-#{len(providers) if len(providers) &lt; 3 else 3}">-->
+            <!--                - or - -->
+            <!--            </em>-->
+            <div class="or_seprator">
+                <p class="">-او-</p>
+            </div>
+            <div class="o_auth_oauth_providers list-group mt-1 mb-1 text-start">
+                <a t-foreach="providers" t-as="p" class="google-signup list-group-item list-group-item-action py-2"
+                   t-att-href="p['auth_link']">
+                    <!--                    <i t-att-class="p['css_class']"/>-->
+                    <div class="google_logo">
+                        <img src="/pe_login/static/src/images/google.png"/>
+                    </div>
+                    Sign up with Google
+                </a>
+            </div>
+        </t>
+    </template>
+    <template id="pe_login.login" inherit_id="pe_login.card_layout" primary="True">
+        <xpath expr="//div[@id='register-card']/div[@id='card_id']" position="inside">
+            <div class="welcome-message">
+                اهلا بك في سند!
+            </div>
+            <div class="new_account">
+                <div class="register">
+                    <a class="custom_link" href="/web/signup">او سجل حساب جديد</a>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-sm custom_button">تسجيل الدخول</button>
+                </div>
+            </div>
+            <form class="" role="form" t-attf-action="/web/login" method="post"
+                  onsubmit="this.action = '/web/login' + location.hash">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                <div class="main_content">
+                    <div>
+                        <p class="email_label mt-2">
+                            البريد الألكتروني
+                        </p>
+                        <input class="input-label" type="text" name="login" required="required"
+                               placeholder="البريد الألكتروني"
+                               t-att-value="login"/>
+                    </div>
+                    <div>
+                        <p class="email_label mt-2">
+                            كلمه السر
+                        </p>
+                        <!--                        <input class="input-label" type="password" name="password" placeholder="كلمه السر" id="password"/>-->
+
+                        <div class="password-field-container">
+                            <span toggle="#password-field"
+                                  class="fa fa-fw fa-eye-slash field-icon toggle-password">
+                            </span>
+                        <input id="password-field" type="password" class="input-label" name="password" required="required" placeholder="كلمه السر"
+                               t-att-autofocus="'autofocus' if only_passwords else None"/>
+
+                        </div>
+
+                    </div>
+                    <p class="alert text-danger" t-if="error" role="alert">
+                        <t t-esc="error"/>
+                    </p>
+                    <p class="alert text-success" t-if="message" role="status">
+                        <t t-esc="message"/>
+                    </p>
+                    <div>
+                        <button class="login-button" type="submit">تسجيل الدخول</button>
+                    </div>
+                    <div class="forget_link">
+                        <a class="" href="/web/reset_password">هل نسيت كلمه المرور؟</a>
+                        <!--                        <p  class="text-danger">البريد الألكتروني او كلمه السر غير صحيحه</p>-->
+
+                    </div>
+
+                    <t t-call="pe_login.providers"/>
+                </div>
+                <input type="hidden" name="redirect" t-att-value="redirect"/>
+            </form>
+        </xpath>
+    </template>
+</odoo>

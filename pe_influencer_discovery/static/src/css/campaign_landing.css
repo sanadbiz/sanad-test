@@ -1,0 +1,66 @@
+.landing-home {
+    display: flex;
+    flex-wrap: nowrap; /* Ensures all items stay in one line */
+    gap: 2px; /* Adds space between items */
+}
+.landing-home > p {
+    padding: 20px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10 auto;
+}
+.landing-body {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items: center;    /* Horizontally center */
+    justify-content: center; /* Vertically center if necessary */
+    text-align: center;     /* Center text inside the children */
+}
+
+
+
+
+.campaign-creation-header {
+    margin: 50px;
+    display: flex;
+      gap: 200px;
+      color: #666A74;
+font-size: 20px;
+font-family: Tajawal;
+font-weight: 500;
+word-wrap: break-word;
+}
+.landing-title{
+margin:16px;
+}
+.landing-title > p {
+color: #333333;
+font-size: 25px;
+font-family: Tajawal;
+font-weight: 700;
+line-height: 37.50px;
+word-wrap: break-word;
+}
+
+.landing-img{
+margin-top:100px;
+}
+.landing-campaign-card{
+ display: flex;
+    flex-wrap: nowrap; /* Ensures all items stay in one line */
+
+    background-color: #fff;
+    border-radius: 18px;
+    margin-right:100px;
+    margin-top:50px;
+}
+.landing-card-title{
+color: #333333;
+font-size: 20px;
+font-family: Tajawal;
+font-weight: 700;
+word-wrap: break-word;
+width:355px;
+
+
+}

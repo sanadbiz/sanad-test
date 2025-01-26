@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="pe_influencer_discovery.search_controller_template">
+        <div>
+            <for method="post">
+                <div class="home ">
+                    <p class="">اكتشف</p>
+                </div>
+
+                <div class=" search-container">
+
+                    <div class="search-wrapper">
+                        <!-- Instagram Dropdown -->
+                        <!--                        <div class="">-->
+                        <!--                            <select class="dropbtn dropbtn-insta rounded-3" name="platform">-->
+                        <!--                                <option  value="instagram">الانستجرام</option>-->
+                        <!--                                <option value="facebook">فيسبوك</option>-->
+                        <!--                                <option value="tiktok">تيك توك</option>-->
+                        <!--                            </select>-->
+
+                        <!--                        </div>-->
+
+
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select__trigger gap-0 px-1">
+
+                                    <div class="arrow">
+                                        <img src="/pe_influencer_discovery/static/src/icons/down-arrow.svg" alt="arrow"
+                                             class="arrow-icon"/>
+
+                                    </div>
+                                    <span>الانستجرام</span>
+                                </div>
+                                <div class="custom-select__options">
+                                    <div class="custom-select__option"  data-type="platform"  data-value="instagram">
+                                        <span class="option-text-icon">
+                                            <img src="/pe_influencer_discovery/static/src/icons/Instagram.svg"/>
+                                        </span>
+                                        <span class="option-text">الانستجرام</span>
+                                        <span class="tick-icon hidden">✓</span>
+                                    </div>
+                                    <div class="custom-select__option"  data-type="platform"  data-value="facebook">
+                                        <span class="option-text-icon">
+                                            <img src="/pe_influencer_discovery/static/src/icons/facebook.svg"/>
+                                        </span>
+
+                                        <span class="option-text">فيسبوك</span>
+                                        <span class="tick-icon hidden">✓</span>
+                                    </div>
+                                    <div class="custom-select__option"  data-type="platform"  data-value="tiktok">
+                                        <span class="option-text-icon">
+                                            <img src="/pe_influencer_discovery/static/src/icons/tiktok.svg"/>
+                                        </span>
+
+                                        <span class="option-text">تيك توك</span>
+                                        <span class="tick-icon hidden">✓</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Search Input -->
+                        <div class="search-input-wrapper">
+                            <input type="text" class="search-input"
+                                   placeholder="التصفية باستخدام بحث AI أو مطابقة الكلمات الرئيسية"/>
+                        </div>
+
+                        <div class="custom-select-wrapper">
+                            <div class="custom-select">
+                                <div class="custom-select__trigger">
+                                    <span>قائمة الاستبعاد</span>
+                                    <div class="arrow">
+                                        <img src="/pe_influencer_discovery/static/src/icons/down-arrow.svg" alt="arrow"
+                                             class="arrow-icon"/>
+                                    </div>
+                                </div>
+                                <div class="custom-select__options">
+                                    <div class="custom-select__option" data-value="1">
+                                        <span class="option-text">قائمة الاستبعاد</span>
+                                        <span class="tick-icon hidden">✓</span>
+                                    </div>
+                                    <div class="custom-select__option" data-value="2">
+                                        <span class="option-text">بحث</span>
+                                        <span class="tick-icon hidden">✓</span>
+                                    </div>
+                                    <div class="custom-select__option" data-value="3">
+                                        <span class="option-text">كل القائمة</span>
+                                        <span class="tick-icon hidden">✓</span>
+                                    </div>
+                                    <div class="custom-select__option" data-value="3">
+                                        <span class="option-text">قائمتي</span>
+                                        <span class="tick-icon hidden">✓</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--                        <div class="">-->
+
+                        <!--                            <select class="dropbtn dropbtn-insta">-->
+                        <!--                                <option value="1">قائمة الاستبعاد-->
+                        <!--                                </option>-->
+                        <!--                                <option value="2">بحث</option>-->
+                        <!--                                <option value="3">كل القائمة</option>-->
+                        <!--                                <option value="3">قائمتي</option>-->
+                        <!--                            </select>-->
+                        <!--                        </div>-->
+                    </div>
+
+                    <div class="filters-wrapper">
+                        <div class="filter-group">
+
+                            <div class="custom-select-wrapper">
+                                <div class="custom-select">
+                                    <div class="custom-select__trigger">
+                                        <span>موقع المتابعين</span>
+                                        <div class="arrow">
+                                            <img src="/pe_influencer_discovery/static/src/icons/down-arrow.svg"
+                                                 alt="arrow"
+                                                 class="arrow-icon"/>
+                                        </div>
+                                    </div>
+                                    <div class="custom-select__options">
+                                        <div class="custom-select__option" data-value="1">
+                                            <span class="option-text">قائمة الاستبعاد</span>
+                                            <span class="tick-icon hidden">✓</span>
+                                        </div>
+
+                                        <t t-foreach="influencers.countries" t-as="country" t-key="country.id">
+                                            <div class="custom-select__option" data-type="country"
+                                                 t-att-data-value="country.name">
+                                                <span class="option-text">
+                                                    <t t-esc="country.name"/>
+                                                </span>
+                                                <span class="tick-icon hidden">✓</span>
+                                            </div>
+                                        </t>
+
+
+                                        <!--                                        <div class="custom-select__option" data-type="country"-->
+                                        <!--                                             data-value="saudi arabia">-->
+                                        <!--                                            <span class="option-text">السعودية</span>-->
+                                        <!--                                            <span class="tick-icon hidden">✓</span>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <div class="custom-select__option" data-type="country"-->
+                                        <!--                                             data-value="united arab emirates">-->
+                                        <!--                                            <span class="option-text">الامارات</span>-->
+                                        <!--                                            <span class="tick-icon hidden">✓</span>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <div class="custom-select__option" data-type="country" data-value="egypt">-->
+                                        <!--                                            <span class="option-text">مصر</span>-->
+                                        <!--                                            <span class="tick-icon hidden">✓</span>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <div class="custom-select__option" data-type="country" data-value="franch">-->
+                                        <!--                                            <span class="option-text">فرنسا</span>-->
+                                        <!--                                            <span class="tick-icon hidden">✓</span>-->
+                                        <!--                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            <div class="dropdown">-->
+
+
+                            <!--                                <select class="dropbtn" name="country">-->
+                            <!--                                    &lt;!&ndash;                                    <option value="1">موقع المتابعين&ndash;&gt;-->
+                            <!--                                    &lt;!&ndash;                                    </option>&ndash;&gt;-->
+                            <!--                                    &lt;!&ndash;                                    <option value="2">دولة, بلد او المنطقة</option>&ndash;&gt;-->
+                            <!--                                    <option value="">موقع المتابعين</option>-->
+                            <!--                                    <option value="saudi arabia">السعودية</option>-->
+                            <!--                                    <option value="united arab emirates">الامارات</option>-->
+                            <!--                                    <option value="egypt">مصر</option>-->
+                            <!--                                    <option value="franch">فرنسا</option>-->
+                            <!--                                </select>-->
+
+                            <!--                            </div>-->
+
+                            <div class="dropdown">
+                                <div class="dropbtn filter-btn">
+                                    حجم المؤثر
+                                    <img class="down-arrows"
+                                         src="/pe_influencer_discovery/static/src/icons/down-arrow.svg"
+                                         alt="arrow"/>
+                                </div>
+                                <div class="dropdown-content px-3">
+
+                                    <!-- Range Slider -->
+                                    <div class="range-container">
+                                        <div class="range-slider">
+                                            <input type="range" class="form-range" min="0" max="100" id="rangeSlider"
+                                                   name="age"/>
+                                            <!--                                            <span id="sliderValue">50</span>-->
+                                        </div>
+                                    </div>
+
+                                    <!-- Value Buttons -->
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <button class="btn btn-outline-secondary value-btn">الي</button>
+                                        <button class="btn btn-outline-secondary value-btn  ">من</button>
+                                    </div>
+
+                                    <!-- Radio Buttons -->
+                                    <div class="radio-group">
+                                        <div class="radio-label">
+                                            <span>1K-10K</span>
+                                            <div class="d-flex gap-2">
+                                                <input type="radio" name="size" id="nanoRadio" value="nano"/>
+                                                <label for="nanoRadio">Nano</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-label">
+                                            <span>10K-50K</span>
+                                            <div class="d-flex gap-2">
+                                                <input type="radio" name="size" id="microRadio" value="micro"/>
+                                                <label for="microRadio">Micro</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-label">
+                                            <span>50K-500K</span>
+                                            <div class="d-flex gap-2">
+                                                <input type="radio" name="size" id="midRadio" value="mid"/>
+                                                <label for="midRadio">Mid</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-label">
+                                            <span>500K-1M</span>
+                                            <div class="d-flex gap-2">
+                                                <input type="radio" name="size" id="macroRadio" value="macro"/>
+                                                <label for="macroRadio">Macro</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="radio-label">
+                                            <span>1M+</span>
+                                            <div class="d-flex gap-2">
+                                                <input type="radio" name="size" id="megaRadio" value="mega"/>
+                                                <label for="megaRadio">Mega</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <div class="dropbtn filter-btn">
+                                    عمر المؤثر
+                                    <img class="down-arrows"
+                                         src="/pe_influencer_discovery/static/src/icons/down-arrow.svg"
+                                         alt="arrow"/>
+                                </div>
+                                <div class="dropdown-content">
+                                    <div class="range-container">
+                                        <div class="range-slider">
+                                            <input type="range" class="form-range" min="0" max="100"
+                                                   id="rangeSlider"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <div class="dropbtn filter-btn">
+                                    قائمة الاستبعاد
+                                    <img class="down-arrows"
+                                         src="/pe_influencer_discovery/static/src/icons/down-arrow.svg"
+                                         alt="arrow"/>
+                                </div>
+                                <div class="dropdown-content">
+                                    <a href="#">Type 1</a>
+                                    <a href="#">Type 2</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <div class="dropbtn filter-btn">
+                                    فيلتر
+                                    <img class="down-arrows"
+                                         src="/pe_influencer_discovery/static/src/icons/Filter list.png"
+                                         alt="arrow"/>
+                                </div>
+                                <div class="dropdown-content p-0">
+                                    <div class="d-flex justify-content-between filter">
+                                        <!-- Hidden Radio Buttons with Links -->
+                                        <label for="both" style="padding:6px 35px;" class="border rounded-1">
+                                            <input type="radio" name="gender" id="both" value="both"
+                                                   style="opacity: 0; position: absolute;"/>
+                                            انثي
+                                        </label>
+                                        <label for="male" style="padding:6px 35px;" class="border rounded-1">
+                                            <input type="radio" name="gender" id="male" value="male"
+                                                   style="opacity: 0; position: absolute;"/>
+                                            رجل
+                                        </label>
+                                        <label for="female" style="padding:6px 35px;" class="border rounded-1">
+                                            <input type="radio" name="gender" id="female" value="female"
+                                                   style="opacity: 0; position: absolute;"/>
+                                            كلاهما
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="search-btn" id="search_influencer_id" type="submit">بحث</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="relevance-div">
+
+                    <div class="relevance-icon">
+                        <p>
+                            الملاءمة
+                        </p>
+                        <img src="/pe_influencer_discovery/static/src/icons/updown.png"/>
+                    </div>
+
+                    <div class="relevance-settings">
+                        <div class="dropdown">
+                            <button class="dropbtn filter-btn">
+                                <img class="drop-icon" src="/pe_influencer_discovery/static/src/icons/setting.png"
+                                     alt="setting"/>
+                            </button>
+                            <div class="dropdown-content">
+                                <p>ضبط رؤية أعمدة الجدول</p>
+                                <div>
+                                    <label class="container">
+
+                                        <input type="checkbox"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="drop-down-checkbox">المتابعون
+                                    </span>
+                                </div>
+                                <div>
+                                    <label class="container">
+
+                                        <input type="checkbox"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="drop-down-checkbox">جمهور الجودة
+                                    </span>
+                                </div>
+                                <div>
+                                    <label class="container">
+
+                                        <input type="checkbox"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="drop-down-checkbox">ER
+                                    </span>
+                                </div>
+                                <div>
+                                    <label class="container">
+
+                                        <input type="checkbox"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="drop-down-checkbox">يذكر العلامة التجارية
+                                    </span>
+                                </div>
+                                <div>
+                                    <label class="container">
+
+                                        <input type="checkbox"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="drop-down-checkbox">بريد إلكتروني
+                                    </span>
+                                </div>
+                                <div>
+                                    <label class="container">
+
+                                        <input type="checkbox"/>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <span class="drop-down-checkbox">فئة
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tooltip-container">
+                            <div class="">
+                                <button class="dropbtn filter-btn">
+                                    <img class="drop-icon" src="/pe_influencer_discovery/static/src/icons/heart.png"
+                                         alt="like"/>
+                                    <span>حفظ البحث</span>
+                                </button>
+
+
+                            </div>
+                            <div class="tooltip">
+                                قم بتعيين المرشحات لحفظ نتائج الاكتشاف
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <table class="profile-overview-table border-top" t-att-data-currentpage="currentPageNumber">
+                    <thead>
+                        <tr>
+                            <th class="td-check-icon">
+                                <img src="/pe_influencer_discovery/static/src/icons/Sanaaad ee-01.png"/>
+                            </th>
+                            <th>الحساب</th>
+                            <th></th>
+                            <th>متابعيين</th>
+                            <th>جودة المتابعين</th>
+                            <th>منصات</th>
+                            <th>فئه</th>
+                            <th>السعوديه</th>
+                            <th>النتيجة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <t t-foreach="influencers.data" t-as="influencer" t-key="influencer.id">
+                            <tr>
+                                <td>
+                                    <t t-out="influencer_index"/>
+                                </td>
+                                <td>
+                                    <div class="td-profile-sec">
+                                        <img t-att-src="influencer.image" alt="Influencer Image"/>
+                                        <div class="td-profile-sec-content">
+                                            <span>
+                                                <t t-out="influencer.name"/>
+                                            </span>
+                                            <span>
+                                                <t t-out="influencer.email"/>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="save-icons">
+                                    <img class="td-save-icons p-3 mx-2"
+                                         src="/pe_influencer_discovery/static/src/icons/Vector(1).png"/>
+                                    <img class="td-save-icons "
+                                         src="/pe_influencer_discovery/static/src/icons/down-arrow.png"/>
+                                </td>
+                                <td>120 م</td>
+                                <td>120 م</td>
+                                <td class="td-icons">
+                                    <div class="social-group">
+                                        <t t-if="influencer.is_tiktok">
+                                            <img src="/pe_influencer_discovery/static/src/icons/tiktok.svg"
+                                                 alt="Avatar"/>
+                                        </t>
+                                        <t t-if="influencer.is_instagram">
+                                            <img src="/pe_influencer_discovery/static/src/icons/Instagram.svg"
+                                                 alt="Avatar"/>
+                                        </t>
+                                        <t t-if="influencer.is_twitter">
+                                            <img src="/pe_influencer_discovery/static/src/icons/X.svg"
+                                                 alt="Avatar"/>
+                                        </t>
+                                        <t t-if="influencer.is_facebook">
+                                            <img src="/pe_influencer_discovery/static/src/icons/facebook.svg"
+                                                 alt="Avatar"/>
+                                        </t>
+                                    </div>
+                                </td>
+                                <td>مطاعم فاشون ميكاب</td>
+                                <td>15%</td>
+                                <td>-</td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+                <div class="container mt-5 position-absolute bottom-0 start-50 translate-middle-x pb-4 fs-20">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="" t-att-data-way="previous" href="#" tabindex="-1">
+                                    <img src="/pe_influencer_discovery/static/src/icons/next_page.svg" alt="Previous"
+                                         width="32"
+                                         height="32"/>
+                                </a>
+                            </li>
+                            <t t-foreach="pagination_info" t-as="p_count" t-key="p_count">
+                                <li class="o_page_item_dashboard_btn page-item mx-3">
+                                    <a class="" t-att-data-way="same" t-att-data-pagenumber="p_count"
+                                       t-attf-href="/api/influencers/{{p_count}}">
+                                        <t t-out="p_count"/>
+                                    </a>
+                                </li>
+                            </t>
+                            <li class="page-item">
+                                <a class="" t-att-data-way="next" href="#">
+                                    <img src="/pe_influencer_discovery/static/src/icons/previous_page.svg" alt="Next"
+                                         width="32"
+                                         height="32"/>
+                                </a>
+
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </for>
+
+        </div>
+    </t>
+</templates>

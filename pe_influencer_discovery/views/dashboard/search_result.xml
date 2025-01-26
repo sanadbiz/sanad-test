@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="pe_influencer_discovery.search_result" name="Search">
+
+        <t t-set="head">
+<!--            <link rel="stylesheet" href="/pe_influencer_discovery/static/src/css/dashboard.css"/>-->
+            <script src="/pe_influencer_discovery/static/src/js/dashboard/js/dashboard.js"/>
+        </t>
+
+         <t t-call="web.frontend_layout">
+                <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
+                <t t-set="body_classname" t-value="'bg-100'"/>
+                <t t-set="no_header" t-value="True"/>
+                <t t-set="no_footer" t-value="True"/>
+
+
+            <div class="dashboard-container position-relative min-vh-100" id="search_container_wrapper_id">
+                <t t-call="pe_influencer_discovery.primary_sidebar"/>
+                <t t-call="pe_influencer_discovery.secondary_sidebar"/>
+                <div class="main-content" id="main-content">
+                <div class="main-content" id="search_container_wrapper_id__main_content"/>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

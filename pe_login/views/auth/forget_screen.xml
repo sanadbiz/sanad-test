@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="pe_login.forget_password" inherit_id="pe_login.card_layout" primary="True">
+        <xpath expr="//div[@id='register-card']/div[@id='card_id']" position="inside">
+
+            <div class="welcome-message">
+                استرجاع كلمه المرور
+                <span>&#8250;</span>
+            </div>
+            <div class="main_content">
+                <form t-attf-action="/web/reset_password" method="post" t-if="not message">
+                    <p class="forget_instruction">أدخل عنوان بريدك الإلكتروني وسنرسل لك رمزًا لإعادة تعيين كلمة المرور
+                        الخاصة بك
+                    </p>
+                    <div>
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <p class="email_label">البريد الألكتروني</p>
+                        <input class="input-label" type="text" name="login" t-att-value="login" required="required"
+                               placeholder="البريد الألكتروني"/>
+                    </div>
+                    <t t-if="token and not invalid_token">
+                        <div>
+                            <p>كلمة المرور</p>
+                            <input class="input-label" type="password" name="password" placeholder="كلمة المرور"/>
+                        </div>
+                        <div>
+                            <p>تأكيد كلمة المرور</p>
+                            <input class="input-label" type="password" name="confirm_password"
+                                   placeholder="تأكيد كلمة المرور"/>
+                        </div>
+                    </t>
+                    <input type="hidden" name="redirect" t-att-value="redirect"/>
+                    <input type="hidden" name="token" t-att-value="token"/>
+                    <div t-if="error" class=" mt-2  mr-2 ml-2">
+                        <p class="alert alert-danger" t-if="error" role="status">
+                            <t t-esc="error"/>
+                        </p>
+
+                    </div>
+                    <div>
+                        <button class="login-button">إعادة تعيين كلمة المرور
+                            <a href=""></a>
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+        </xpath>
+    </template>
+</odoo>
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    layouts  -->
+
+    <template id="pe_login.main_layout">
+         <t t-call="web.frontend_layout">
+                <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
+                <t t-set="body_classname" t-value="'bg-100'"/>
+                <t t-set="no_header" t-value="True"/>
+                <t t-set="no_footer" t-value="True"/>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <div id="main-container" class="main-container container-fluid" style="padding: 0;">
+                    <span id="side_left" class="side_left"></span>
+                    <div class="side-banner col-md-6">
+                        <div class="logo-container">
+                            <div class="logo"></div>
+                            <div class="sub-logo">
+                                <img src="/pe_login/static/src/images/sanad logo approval-04 2.png"/>
+                            </div>
+                            <div class="logo-text">
+                                <p>
+                                    <p>
+                                    جرّب خطة البدء</p>
+                                    <p>
+
+
+                                    اكتشاف وتحليل المؤثرين الأقوياء
+                                    </p>
+
+                                    <p>
+                                 تتبع أداء  Instagram وYouTube.اكتشاف  <br/> الحساب. مقاعد غير محدودة.
+
+                                    <br/>
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         </t>
+    </template>
+
+    <template id="pe_login.card_layout" inherit_id="pe_login.main_layout" primary="True">
+        <xpath expr="//div[@id='main-container']/span[@id='side_left']" position="after">
+            <div class="register-container container-fluid" id="register-card">
+                 <div class="card" id="card_id"></div>
+            </div>
+        </xpath>
+    </template>
+
+
+
+<!--    Fields   -->
+    <template id="pe_login.email_field" name="email field">
+        <t t-set="wrong_email_style" t-value="'none'"/>
+           <div>
+               <p class="email_label">Email</p>
+               <input class="input-label" type="email" placeholder="email"/>
+           </div>
+    </template>
+</odoo>

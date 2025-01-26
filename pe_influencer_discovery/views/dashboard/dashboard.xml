@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="pe_influencer_discovery.web_dashboard" name="Dashboard">
+        <t t-set="head">
+            <link rel="stylesheet" href="/pe_influencer_discovery/static/src/css/dashboard.css"/>
+            <script src="/pe_influencer_discovery/static/src/js/dashboard/js/dashboard.js"/>
+        </t>
+        <t t-call="web.frontend_layout">
+            <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
+            <t t-set="body_classname" t-value="'bg-100'"/>
+            <t t-set="no_header" t-value="True"/>
+            <t t-set="no_footer" t-value="True"/>
+
+            <div class="dashboard-container">
+                <!-- Sidebar -->
+                <t t-call="pe_influencer_discovery.primary_sidebar"/>
+                <t t-call="pe_influencer_discovery.secondary_sidebar"/>
+                <!-- Main Content -->
+                <div class="main-content" id="main-content">
+                    <div class="home ">
+                        <p class="main-container-dashboard">الصفحة الرئيسية</p>
+                    </div>
+                    <div class="main-container-dashboard">
+                        <div class="container-fluid">
+                            <!-- Welcome Section -->
+
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <div class="card-bg main-pad">
+                                        <p class="h3">اهلا بك في سند!</p>
+                                        <div class="welcome-container">
+                                            <div class="welcome-row">
+                                                <div class="welcome-content">
+                                                    <h4>احصل على أكثر من برنامج تسويق عبر المؤثرين قم ببناء برنامج منشئ
+                                                        عالمي المستوى وتوسيع نطاقه باستخدام
+                                                    </h4>
+                                                    <p>
+                                                        نعمل على دمج سير العمل بالكامل في منصة واحدة سهلة الاستخدام.
+                                                        سواء كنت تطلق منتجًا، أو تنشئ حملة توعية، أو تعمل مع أحد
+                                                        المشاهير، ونعمل على أتمتة العمل المزدحم وتوفر الأدوات اللازمة
+                                                        لدمج محتوى منشئ المحتوى في استراتيجية التسويق الشاملة الخاصة بك.
+                                                    </p>
+                                                </div>
+                                                <div class="welcome-image">
+                                                    <img src="/pe_influencer_discovery/static/src/images/Container.png"
+                                                         alt="Welcome"/>
+                                                </div>
+                                            </div>
+                                            <div class="action-buttons-container">
+
+                                                <button class="action-button campaign-btn">
+                                                    أنشاء حمله جديدة
+                                                </button>
+                                                <button class="action-button discover-btn">
+                                                    أكتشاف المؤثرين
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <t t-call="pe_influencer_discovery.featured_section"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="pe_influencer_discovery.featured_section">
+        <section class="card-bg py-4">
+            <div class="container card-container-pad">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item border-0">
+                        <div class="accordion-header" id="headingOne">
+                            <div class="card-feature d-flex justify-content-between align-items-center px-3 py-2">
+                                <h3 class="w-100">مختارات مميزة في المملكة العربية السعودية</h3>
+                                <div class="accordion-button p-0 bg-transparent"
+                                     type="button"
+                                     data-bs-toggle="collapse"
+                                     data-bs-target="#collapseOne"
+                                     aria-expanded="true"
+                                     aria-controls="collapseOne">
+<!--                                    <img class="arrow-image"-->
+<!--                                         src="/pe_influencer_discovery/static/src/icons/Arrow_back.png"-->
+<!--                                         alt="toggle"/>-->
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="flex-div card-1 py-2">
+
+                                    <p class="card-content">المؤثرين الأكثر متابعة مع نوعية جيدة من
+                                        الجمهور
+                                    </p>
+                                    <div class="avatar-group">
+                                        <img src="/pe_influencer_discovery/static/src/images/image-1.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-2.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-3.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-4.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-5.png"
+                                             alt="Avatar"/>
+                                        <div class="avatar-count">+50</div>
+                                    </div>
+
+                                </div>
+                                <div class="flex-div card-2 py-2">
+
+                                    <p class="card-content">أسرع المؤثرين نموًا الذين لديهم أقل من
+                                        100 ألف متابع
+                                    </p>
+                                    <div class="avatar-group">
+                                        <img src="/pe_influencer_discovery/static/src/images/image-1.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-2.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-3.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-4.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-5.png"
+                                             alt="Avatar"/>
+                                        <div class="avatar-count">+50</div>
+                                    </div>
+
+                                </div>
+                                <div class="flex-div card-3 py-2">
+
+                                    <p class="card-content">أكثر الحسابات تعليقًا في عالم الموضة
+                                    </p>
+                                    <div class="avatar-group">
+                                        <img src="/pe_influencer_discovery/static/src/images/image-1.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-2.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-3.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-4.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-5.png"
+                                             alt="Avatar"/>
+                                        <div class="avatar-count">+50</div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="flex-div card-4 py-2">
+
+                                    <p class="card-content">حسابات المؤثرين المذكورة على @instagram
+                                    </p>
+                                    <div class="avatar-group">
+                                        <img src="/pe_influencer_discovery/static/src/images/image-1.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-2.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-3.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-4.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-5.png"
+                                             alt="Avatar"/>
+                                        <div class="avatar-count">+50</div>
+                                    </div>
+
+                                </div>
+                                <div class="flex-div card-5 py-2">
+
+                                    <p class="card-content">أفضل الحسابات جودة من المملكة العربية
+                                        السعودية
+                                    </p>
+                                    <div class="avatar-group">
+                                        <img src="/pe_influencer_discovery/static/src/images/image-1.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-2.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-3.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-4.png"
+                                             alt="Avatar"/>
+                                        <img src="/pe_influencer_discovery/static/src/images/image-5.png"
+                                             alt="Avatar"/>
+                                        <div class="avatar-count">+50</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="pe_influencer_discovery.secondary_sidebar">
+        <!-- Secondary Sidebar -->
+        <div class="secondary-sidebar" id="secondary-sidebar">
+
+            <div>
+                <div class="secondary-sidebar-header">
+                    <img id="close-icon" src="/pe_influencer_discovery/static/src/icons/Close.png"/>
+                    <p class="">الحساب</p>
+                </div>
+
+            </div>
+            <div class="profile-icon">
+                <img src="/pe_influencer_discovery/static/src/icons/profile_icon.png"/>
+            </div>
+            <p class="profile-name">
+                مروان عبد الغني
+            </p>
+
+            <div class="profile-card-secondary-sidebar">
+                <div class="card-header">
+                    <span class="trial-status">نشطه</span>
+                    <span class="trial-period">فترة تجريبيه</span>
+                </div>
+
+                <div class="card-content-profile">
+                    <p class="expiry-date">تنتهي في 11/14</p>
+                    <p class="remaining-days">(متبقي <span class="days-left">3</span> أيام)
+                    </p>
+                </div>
+                <button class="purchase-button">شراء خطه جديده</button>
+            </div>
+
+            <div class="settings-logout">
+                <div class="settings-option settings-logout-icon">
+                    <img src="/pe_influencer_discovery/static/src/icons/setting.png"/>
+                    <span class="option-text">الإعدادات</span>
+                </div>
+                <a href="/web/session/logout" class="logout-option settings-logout-icon" id="logout_button">
+                    <img src="/pe_influencer_discovery/static/src/icons/logout.png"/>
+                    <span class="option-text">تسجيل الخروج</span>
+                </a>
+            </div>
+
+
+        </div>
+    </template>
+
+    <template id="pe_influencer_discovery.primary_sidebar">
+        <!-- Primary Sidebar -->
+        <div class="sidebar sidebar-expanded position-fixed" id="sidebar">
+            <div>
+                <div class="pin-button" id="pinButton">
+                    <img src="/pe_influencer_discovery/static/src/icons/Push pin.png"/>
+                </div>
+                <div class="logo-icon">
+                    <img src="/pe_influencer_discovery/static/src/images/sanad logo approval-04 2.png"/>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-shrink-0 pt-4  ">
+                <ul class="nav nav-pills flex-column mb-auto "
+                    style="padding-right: 5px !important; list-style: none;">
+                    <li class="nav-item">
+                        <a href="/web/dashboard" class="nav-link custom-glow">
+                            <img src="/pe_influencer_discovery/static/src/icons/Home.png"/>
+                            <span class="menu-text pad-right">الصفحة الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/web/search" class="nav-link custom-glow">
+                            <img src="/pe_influencer_discovery/static/src/icons/discover_influencer.png"/>
+                            <span  class="menu-text pad-right">اكتشاف المؤثرين</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link custom-glow">
+                            <img  src="/pe_influencer_discovery/static/src/icons/campaign.png"/>
+                            <span class="menu-text pad-right">الحملات</span>
+                        </a>
+                        <img class="left-nav-arrow" src="/pe_influencer_discovery/static/src/icons/Arrow back ios new.png"/>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link custom-glow">
+                            <img src="/pe_influencer_discovery/static/src/icons/gg_media-live.png"/>
+                            <span class="menu-text pad-right">خطط الوسائط</span>
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="/my" class="nav-link custom-glow">
+                            <img src="/pe_influencer_discovery/static/src/icons/Vector.png"/>
+                            <span class="menu-text pad-right">شبكتي</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link custom-glow">
+                            <img src="/pe_influencer_discovery/static/src/icons/subway_massage.png"/>
+                            <span class="menu-text pad-right">رسائل</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link custom-glow">
+                            <img src="/pe_influencer_discovery/static/src/icons/analytics.png"/>
+                            <span class="menu-text pad-right">التحليلات</span>
+                        </a>
+                        <img class="left-nav-arrow" src="/pe_influencer_discovery/static/src/icons/Arrow back ios new.png"/>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link custom-glow">
+                            <img src="/pe_influencer_discovery/static/src/icons/notification.png"/>
+                            <span class="menu-text pad-right">إشعارات</span>
+                        </a>
+                    </li>
+                    <li class="nav-item  position-static menubar-bottom-icons">
+                        <a href="#" class="nav-link">
+                            <img src="/pe_influencer_discovery/static/src/icons/help.png"/>
+                            <span class="menu-text pad-right">المساعدة والترقية</span>
+                        </a>
+                    </li>
+                    <li class="nav-item position-static">
+                        <a href="#" class="nav-link">
+                            <img src="/pe_influencer_discovery/static/src/icons/profile.png"/>
+                            <span class="menu-text pad-right">مروان عبد الغني</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </template>
+</odoo>

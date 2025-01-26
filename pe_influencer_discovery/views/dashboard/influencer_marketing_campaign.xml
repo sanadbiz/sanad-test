@@ -1,0 +1,53 @@
+<odoo>
+    <record id="view_influencer_campaign_form" model="ir.ui.view">
+        <field name="name">influencer.campaign.form</field>
+        <field name="model">influencer.campaign</field>
+        <field name="arch" type="xml">
+            <form string="Influencer Campaign">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="campaign_tags"/>
+                            <field name="is_campaign_private"/>
+                            <field name="is_add_brief"/>
+                            <field name="start_date"/>
+                            <field name="currency_id"/>
+                            <field name="active"/>
+                            <field name="budget_spent"/>
+                            <field name="is_instagram"/>
+                        </group>
+                        <group>
+                            <field name="influencer_ids" widget="many2many_tags"/>
+                            <field name="end_date"/>
+                            <field name="is_enable_store"/>
+                            <field name="track_your_content"/>
+                            <field name="pdf_brief_id" widget="many2many_binary"/>
+                            <field name="posted"/>
+                             <field name="is_youtube"/>
+                             <field name="is_tiktok"/>
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Budget and Payment">
+                            <group>
+                                <field name="campaign_budget"/>
+                                <field name="budget_per_influencer"/>
+                                <field name="payment_terms"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_influencer_campaign" model="ir.actions.act_window">
+        <field name="name">Influencer Campaign</field>
+        <field name="res_model">influencer.campaign</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_influencer_campaign_root" name="Influencer Campaigns" sequence="10"/>
+    <menuitem id="menu_influencer_campaign" name="Campaigns" parent="menu_influencer_campaign_root"
+              action="action_influencer_campaign" sequence="10"/>
+</odoo>

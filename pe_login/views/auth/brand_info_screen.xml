@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="pe_login.brand_info" inherit_id="pe_login.card_layout" primary="True">
+        <xpath expr="//div[@id='register-card']/div[@id='card_id']" position="inside">
+            <div class="p-4">
+                <div class="info-message">
+                    معلومات الحساب الجديد
+                </div>
+                <div class="info_main_content container-fluid">
+                    <form class="" role="form" id="profile_brand_info_form_id" t-attf-action="/web/brand_info"
+                          method="post"
+                          t-if="not message">
+
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                        <!-- Name Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">الأسم الثاني</label>
+                                <input type="text" class="input-label" name="last_name" id="b_last_name"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">الأسم الأول</label>
+                                <input type="text" class="input-label" name="first_name" id="b_first_name"/>
+                            </div>
+                        </div>
+
+                        <!-- Brand Name -->
+                        <div class="form-group">
+                            <label class="form-label">أسم العلامه التجاريه</label>
+                            <input type="text" class="input-label" name="brand_name" id="b_brand_name"/>
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="form-group">
+                            <label class="form-label">رقم الموبايل</label>
+                            <input type="tel" class="input-label" name="mobile_number" id="b_mobile_number"/>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="form-group">
+                            <label class="form-label">الدوله</label>
+                            <select class="input-label" name="country" id="b_country">
+                                <option value="">Select country</option>
+                                <t t-foreach="countries" t-as="country">
+                                    <option t-att-value="country.code">
+                                        <t t-esc="country.name"/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="login-button">أنشاء حساب</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

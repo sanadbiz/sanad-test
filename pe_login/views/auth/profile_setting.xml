@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="pe_login.profile_settings">
+        <t t-call="web.frontend_layout">
+            <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
+            <t t-set="body_classname" t-value="'bg-100'"/>
+            <t t-set="no_header" t-value="True"/>
+            <t t-set="no_footer" t-value="True"/>
+            <div class="container">
+                <div class="header-logo">
+                    <img src="/pe_login/static/src/images/sanad logo approval-04 2blk.png"/>
+                </div>
+                <div class="profile-card">
+                    <div class="above-card">
+                        <p class="text_card">
+                            أخترا نوع الحساب
+                        </p>
+                        <p class="text_size">
+                            هل أنت مؤثر أو علامة تجارية؟ اختر أدناه
+                        </p>
+                    </div>
+                    <form id="profile_settings_form_id">
+                        <div class="d-flex justify-content-between">
+                            <!--                    <div class="image-login image-left">-->
+                            <!--                        <img src="/pe_login/static/src/images/Frame.png"/>-->
+                            <!--                        <p class="pic-text">مؤثر</p>-->
+                            <!--                        <div class="check-icon">-->
+                            <!--                            <img src="/pe_login/static/src/images/Check circle.png"/>-->
+                            <!--                        </div>-->
+                            <!--                    </div>-->
+                            <div class="image-login image-right" style="background-color: #E7E5FC;"
+                                 id="profile_individual_img_id">
+                                <img src="/pe_login/static/src/images/Frame.png"/>
+                                <p class="pic-text">مؤثر</p>
+                                <div class="check-icon">
+                                    <img src="/pe_login/static/src/images/Check circle.png"
+                                         id="profile_individual_check_id"/>
+                                </div>
+                            </div>
+                            <div class="text-between-image">
+                                <p>
+                                    او
+                                </p>
+                            </div>
+                            <div class="image-login image-right" id="profile_brand_img_id">
+                                <img src="/pe_login/static/src/images/Frame(1).png"/>
+                                <p class="pic-text">
+                                    علامة تجارية
+                                </p>
+                                <div class="check-icon">
+                                    <img src="/pe_login/static/src/images/Check circle.png" style="display:none;"
+                                         id="profile_brand_check_id"/>
+                                </div>
+                            </div>
+                        </div>
+                        <select name="profile_selection" id="profile_selection_id" class="d-none">
+                            <option value="influencer" selected="1">influencer</option>
+                            <option value="brand">brand</option>
+                        </select>
+                        <div class="info-button-container mt-5">
+                            <button type="submit" id="submit_form_profile_info" class="login-button">تأكيد</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

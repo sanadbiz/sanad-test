@@ -1,0 +1,692 @@
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    background: #FAFAFA;
+    box-sizing: border-box;
+
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.register-container {
+    max-width: 550px;
+    max-height: 700px;
+    position: relative;
+    margin: auto;
+}
+
+.card {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    height: 100%;
+    padding: 10px;
+}
+
+
+.welcome-message {
+    color: #333;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 20px;
+    font-family: Tajawal;
+    font-weight: 500;
+    word-wrap: break-word;
+    padding-top: 20px;
+    padding-right: 11px;
+    text-align: right;
+}
+
+.title {
+    position: absolute;
+    top: 60px;
+    left: 225px;
+    color: #211142;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+.new_account{
+    color: #211142;
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    justify-content: space-between;
+    align-items: center;
+    line-height: normal;
+
+    padding: 20px;
+     white-space: nowrap;
+    width: 100%;
+
+}
+.register {
+    padding-left: 170px;
+}
+.register .custom_link {
+    text-decoration: none;
+}
+.custom_link {
+    color: #211142;
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none;
+}
+.custom_button {
+    color: #272020;
+    font-family: Tajawal;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: 0px;
+    background-color: transparent;
+}
+.email_label {
+    text-align: right;
+}
+.main_content{
+    padding: 20px 30px;
+}
+
+.input-label {
+
+    border: 0px;
+    border-radius: 12px;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: #EFF3F6;
+    font-size: 14px;
+    text-align:right;
+}
+.login-button {
+    width: 100%;
+    margin-top: 20px;
+    /* margin: 30px; */
+    background: #211142;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+}
+.pad-custom{
+text-align:right;
+padding-right:33px;
+}
+.forget_link{
+    text-align: right;
+    margin-top: 16px;
+}
+.or_seprator{
+    text-align: center;
+    margin-top: 16px;
+    color: #272020;
+font-family: Tajawal;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.google-button {
+    width: 100%;
+    height: 50px;
+    /* margin-top: 20px; */
+    /* margin: 30px; */
+    background: #fff;
+    color: white;
+    text-align: center;
+
+    font-weight: 700;
+    border-radius: 9.499px;
+border: 0.792px solid #E2E2E2;
+
+}
+/* .login-link {
+    position: absolute;
+    top: 60px;
+    left: 438px;
+    color: #272020;
+    font-size: 16px;
+    text-decoration: none;
+} */
+
+.input-group {
+    width: 450px;
+    height: 50px;
+    margin: 20px 30px;
+    background: #EFF3F6;
+    border: 1px solid #E2E2E2;
+    border-radius: 12px;
+}
+
+.input-group.email {
+    margin-top: 128px;
+}
+
+.input-group.password {
+    margin-top: 50px;
+}
+
+
+.separator {
+    text-align: center;
+    color: #272020;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.google-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 40px;
+    background: white;
+    border: 0.79px solid #E2E2E2;
+    border-radius: 9.5px;
+    margin: 10px auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.08px;
+    font-weight: 500;
+    color: #1F1F1F;
+    font-family: Poppins;
+    font-size: 11.083px;
+    font-style: normal;
+    font-weight: 500;
+
+}
+.google-signup i {
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+.google_logo > img{
+    width: 14.249px;
+    height: 14.249px;
+    margin-right: 6px;
+    margin-bottom:3px;
+
+
+}
+
+.google-text {
+    color: #1F1F1F;
+}
+
+.forgot-password {
+    text-align: center;
+    font-size: 16px;
+    text-decoration: underline;
+    color: #272020;
+}
+
+.side-banner {
+    width: 533px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%);
+    color: white;
+    text-align: center;
+    padding: 0px 1px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2;
+    position: relative;
+}
+
+/* Container to hold both logo and text */
+.logo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    background: url('/pe_login/static/src/images/logo.png') no-repeat center;
+    background-size: cover;
+}
+.sub-logo {
+
+
+    position: absolute; /* Positions the sub-logo relative to the logo container */
+    top: 16%; /* Adjust this value to change the vertical position of the sub-logo */
+    left: 41%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center it exactly */
+    width: 100px; /* Maintain aspect ratio */
+    height: 80px; /* Set the desired height for the sub-logo */
+    z-index: 2; /* Ensure sub-logo appears above the main logo */
+}
+
+.logo-text {
+    position: absolute;
+    width: 75%;
+    font-family: Tajawal;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Tajawal;
+    word-wrap: break-word;
+    font-size: 25px;
+    font-weight: 500;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    pointer-events: none; /* Prevents text from interfering with any clicks on the logo */
+}
+.box_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* space between boxes */
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.box {
+    width: 64px;
+    height: 64px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #E2E2E2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none; /* Removes default outline */
+    background: transparent; /* Ensures input inherits background */
+    padding: 0;
+}
+.retrieve_password {
+    color: #333333;
+    font-size: 20px;
+    font-family: Tajawal;
+    font-weight: 500;
+    word-wrap: break-word;
+    padding-top: 20px;
+    padding-right: 75px;
+    text-align: right;
+}
+.enter_your_password {
+
+
+    color: #272020;
+    font-size: 16px;
+    font-family: Tajawal;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: right;
+    padding-right: 35px;
+}
+
+
+
+.below_hyperlinks{
+    color: #211142;
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    justify-content: space-between;
+    align-items: center;
+    line-height: normal;
+
+    padding: 20px;
+
+}
+
+.didnt_receive_code {
+
+    color: #272020;
+     font-size: 16px;
+     font-family: Tajawal;
+     font-weight: 400;
+     word-wrap: break-word;
+     text-align: center;
+     padding-right: 10px;
+}
+.register_again {
+    color: black;
+    font-size: 16px;
+    font-family: Tajawal;
+    font-weight: 700;
+    word-wrap: break-word;
+    text-align: right;
+    padding-left: 150px;
+}
+
+.card_retrieve_password {
+    width: 100%;
+    background: white;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+}
+.element {
+    color: #272020;
+    font-size: 16px;
+    font-family: Tajawal;
+    font-weight: 400;
+    word-wrap: break-word;
+    text-align: right;
+    padding-right: 28px;
+
+}
+.header-logo{
+width: 100%;
+padding-top: 59px;
+}
+.header-logo > img{
+    width: 218px;
+    height: 57px;
+    display: block;
+    margin: 0 auto;
+
+
+
+}
+
+
+
+.profile-card {
+    max-width: 723px;
+    background: white;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    margin: 109px auto 0 auto;
+    padding: 0 34px 40px 54px;
+
+}
+
+.above-card {
+
+    width: 100%;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 700;
+
+    text-align: center;
+    padding-top: 20px;
+
+}
+.below-card {
+    display: flex;
+    justify-content: space-between;
+}
+.image-login{
+
+    max-width: 283px;
+    width: 100%;
+    cursor: pointer;
+
+}
+.image-left {
+    background-color: #E7E5FC;
+    padding-top: 39px;
+
+
+}
+.image-left >img{
+    display: block;
+    margin: 0 auto;
+
+
+
+}
+.image-right {
+    background-color:#E6F9F7;
+    padding-top: 39px;
+    position: relative;
+
+}
+.image-right >img{
+    display: block;
+    margin: 0 auto;
+
+
+
+}
+.check-icon > img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(22%, 29%);
+
+}
+.pic-text {
+    padding-top: 11px 0 19px 0;
+    text-align: center;
+
+}
+.text-between-image{
+    padding-top: 99px;
+}
+.info-button{
+    max-width: 450px;
+    width: 100%;
+    height: 50px;
+    background: #211142;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 30px auto 0 auto;
+    display: block;
+
+
+
+}
+info-card {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 60px;
+}
+
+.info-message {
+    font-size: 24px;
+    font-weight: 500;
+    color: #0a0a0a;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.welcome-message span {
+    color: #2d1f5a;
+}
+
+.info_main_content form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 25px;
+    text-align: right;
+}
+
+.form-group {
+    flex: 23%;
+}
+
+.email_label, .form-label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 9px;
+    display: block;
+    text-align: right;
+}
+
+.input-label {
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    background-color: #EFF3F6;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 10px;
+}
+.input-label:focus {
+    outline: none;
+    border-color: #6b4ce6;
+    background-color: #fff;
+}
+.login-button {
+    width: 100%;
+    padding:6px 14px;
+    background-color: #2d1f5a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s;
+}
+.login-button:hover {
+    background-color: #231747;
+}
+.is-invalid {
+    border-color: red !important;
+}
+input::-webkit-input-placeholder {
+  padding: 0 15px;
+  text-align:right;
+  direction: rtl;
+
+}
+.field-icon {
+  float: left;
+  margin-left: 12px;
+  margin-top: 25px;
+  position: absolute;
+  z-index: 2;
+}
+.text-danger {
+  text-align: left;
+  top: 10px;
+  margin-top: -19px;
+}
+
+@media (max-width: 768px) {
+.button_popup_design{
+
+    border-radius: 12px 12px 12px 12px;
+    width: 100%;
+    background: #211142;
+    color: white;
+}
+    .side-banner {
+        display: none;
+    }
+     .login-button, .google-signup, .custom_button, .box_container {
+            width: 100%;
+        }
+      .new_account {
+        flex-wrap: nowrap; /* Prevents wrapping of elements */
+        justify-content: space-between; /* Keeps items spaced evenly */
+        gap: 10px; /* Adds space between the link and button */
+        width: 100%; /* Ensures the container uses all available width */
+        padding: 10px; /* Optional: Adjust padding for mobile */
+    }
+    .field-icon {
+        float: left;
+        margin-left: -273px;
+
+     }
+     .box {
+           width: 48px;
+    }
+    .logo-container {
+      display: none;
+    }
+    .register_again {
+          font-size: 12px;
+    padding-left: 65px;
+}
+.new_account {
+  padding: 20px;
+  margin-left: -102px;
+}
+.welcome-message {
+  padding-right: 30px;
+}
+p {
+  margin-left: 22px;
+}
+.enter_your_password {
+  font-size: 13px;
+}
+.above-card {
+
+  font-size: 14px;
+
+
+}
+.text_size {
+  font-size: small;
+  font-weight: 40;
+}
+.check-icon > img {
+  bottom: -25px;
+  right: -10px;
+
+
+}
+  .text_card {
+    margin-left: 3px;
+  }
+.text-between-image {
+  padding-top: 90px;
+  padding-right: 17px;
+}
+.pic-text {
+
+  padding-right: 24px;
+}
+.image-left {
+  height: 195px;
+  width: 100%;
+}
+.profile-card {
+
+  padding: 0px;
+}
+.forget_link {
+  margin-top: 32px;
+}
+.text-danger {
+  margin-top: -46px;
+}
+.or_seprator{
+margin-top: 34px;
+}
+}
+.button_popup_design{
+
+    border-radius: 12px 12px 12px 12px;
+    width: 300px;
+    background: #211142;
+    color: white;
+}

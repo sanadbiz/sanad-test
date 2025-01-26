@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pe_login.view_res_users_ext_form" model="ir.ui.view">
+        <field name="name">pe_login.res.users.ext.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <group>
+                    <field name="first_name" readonly="1"/>
+                    <field name="last_name" readonly="1"/>
+                    <field name="account_type" readonly="1"/>
+                    <field name="brand_name" readonly="1"/>
+                    <field name="country_name" readonly="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
